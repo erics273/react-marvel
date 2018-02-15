@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Character from './containers/Character'
+import CharacterList from './containers/CharacterList'
 import Navigation from './components/navigation/Navigation'
 
 class App extends Component {
   render() {
     return (
       <div>
-        eric was here
         <Navigation />
-        <Character />
+        <CharacterList />
       </div>
     );
   }
