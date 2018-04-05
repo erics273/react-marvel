@@ -9,7 +9,9 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk';
 import marvelApp from './reducers'
 
-let store = createStore(marvelApp, applyMiddleware(thunk))
+let store = createStore(marvelApp, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
